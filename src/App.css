@@ -1,0 +1,65 @@
+/* ==================== Global Full-Screen Setup ==================== */
+
+/* Make React app always occupy full viewport */
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Remove previous max-width/padding restrictions from #root */
+#root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Base page class for all pages */
+.page {
+  height: 100vh;        /* full viewport height */
+  width: 100vw;         /* full viewport width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  text-align: center;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+}
+
+/* Page heading and text styling */
+.page h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+}
+
+.page p {
+  font-size: 1.5rem;
+  opacity: 0.9;
+}
+
+/* Gentle floating animation for playful effect */
+@keyframes floaty {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.page-animated {
+  animation: floaty 4s ease-in-out infinite;
+}
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 1024px) {
+  .page h1 { font-size: 2.5rem; }
+  .page p { font-size: 1.2rem; }
+}
+
+@media screen and (max-width: 768px) {
+  .page h1 { font-size: 2rem; }
+  .page p { font-size: 1rem; }
+}

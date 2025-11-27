@@ -1,0 +1,233 @@
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(45deg, #2da131, #a1862d);
+    padding: 15px 20px;
+    color: white;
+    flex-wrap: wrap;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+.nav-links li {
+    margin: 0 15px;
+    position: relative;
+}
+
+.nav-links a,
+.nav-links span {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    display: block;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.nav-links a:hover,
+.nav-links span:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    border-radius: 5px;
+    overflow: hidden;
+    min-width: 150px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.dropdown-menu li {
+    display: block;
+}
+
+.dropdown-menu a {
+    color: #333;
+    padding: 10px 15px;
+    display: block;
+    transition: background 0.2s;
+}
+
+.dropdown-menu a:hover {
+    background: #008CBA;
+    color: white;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Page Container for all Admin/Player pages */
+.page-container {
+    padding: 5vh 2vw;
+    text-align: center;
+    background: linear-gradient(to right, #fff5f7, #e0f7fa);
+    min-height: 100vh;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    box-sizing: border-box;
+}
+
+/* Forms */
+.admin-form {
+    max-width: 400px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0.25rem 1rem rgba(0,0,0,0.2);
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #e24ab2;
+    outline: none;
+}
+
+/* Buttons */
+.button {
+    width: 100%;
+    padding: 0.7rem;
+    background: linear-gradient(45deg, #e24ab2, #5fe350);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,0.3);
+}
+
+/* Success and Error Messages */
+.success-message {
+    color: green;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.error-message {
+    color: red;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* Tables for Admin pages */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: #ffffff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+}
+
+thead {
+    background: linear-gradient(45deg, #4A90E2, #0B60B0);
+    color: white;
+}
+
+thead th {
+    padding: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+tbody tr {
+    border-bottom: 1px solid #ddd;
+    transition: background 0.3s ease-in-out;
+}
+
+tbody tr:hover {
+    background: rgba(161, 45, 51, 0.1);
+}
+
+td {
+    padding: 12px;
+    color: #333;
+}
+
+tbody tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+/* Responsive Table */
+@media screen and (max-width: 768px) {
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    td, th {
+        padding: 10px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links li {
+        margin: 0.5rem 0;
+    }
+
+    .dropdown-menu {
+        position: relative;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+    }
+}
